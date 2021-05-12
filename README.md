@@ -69,7 +69,7 @@ python scripts/train.py --exp_dir=[result_dir] --dataset_type=anime_cross_to_img
 ```
 python scripts/generate_stylegan_samples.py --exp_dir=[result_dir] --stylegan_weights ./pretrained_models/stylegan2-ffhq-config-f.pt --style_num 18 --channel_multiplier 2
 ```
-Then a StyleGAN image (\*.png) and a corresponding latent code (\*.pt) is obtained in [result_dir]/data/images and [result_dir]/checkpoints. 
+Then a StyleGAN image (\*.png) and a corresponding latent code (\*.pt) are obtained in [result_dir]/data/images and [result_dir]/checkpoints. 
 
 2. Manually annotate the generated image in [result_dir]/data/images and save the annotated mask in [result_dir]/data/labels. 
 
