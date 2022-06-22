@@ -1,4 +1,7 @@
 # Few-shot Semantic Image Synthesis Using StyleGAN Prior
+
+The extended version is available <a href="https://github.com/endo-yuki-t/StyleGANSparseControl">here</a>. 
+
   <a href="https://arxiv.org/abs/2103.14877"><img src="https://img.shields.io/badge/arXiv-2103.14877-b31b1b.svg"></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
 <p align="center">
@@ -15,7 +18,7 @@ Our method can synthesize photorealistic images from dense or sparse semantic an
 Download and decompress <a href="https://drive.google.com/file/d/1s-AS7WRUbL3MzEALxM8y4_XO3n3panxH/view?usp=sharing">the file containing StyleGAN pre-trained models</a> and put the "pretrained_models" directory in the parent directory.
 
 ## Inference with our pre-trained models
-1. Download and decompress <a href="https://drive.google.com/file/d/14y0mAxJa167hzrkStiNKLEX_bBxfsnb9/view?usp=sharing">the file containing our pretrained encoders</a> and put the "results" directory in the parent directory. 
+1. Download and decompress <a href="https://drive.google.com/file/d/1INoO3WpEY8hkx7LyOdiOX-dPBNEO4gSs/view?usp=sharing">the file containing our pretrained encoders</a> and put the "results" directory in the parent directory. 
 2. For example, our results for celebaMaskHQ in a one-shot setting can be generated as follows:
 ```
 python scripts/inference.py --exp_dir=results/celebaMaskHQ_oneshot --checkpoint_path=results/celebaMaskHQ_oneshot/checkpoints/iteration_100000.pt --data_path=./data/CelebAMask-HQ/test/labels/ --couple_outputs --latent_mask=8,9,10,11,12,13,14,15,16,17

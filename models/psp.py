@@ -44,14 +44,6 @@ class pSp(nn.Module):
 			encoder = psp_encoders.BackboneEncoderUsingLastLayerIntoW(50, 'ir_se', self.opts)
 		elif self.opts.encoder_type == 'BackboneEncoderUsingLastLayerIntoWPlus':
 			encoder = psp_encoders.BackboneEncoderUsingLastLayerIntoWPlus(50, 'ir_se', self.opts)
-		elif self.opts.encoder_type == 'GradualStyleEncoderV2':
-			encoder = psp_encoders.GradualStyleEncoderV2(50, 'ir_se', self.opts)
-		elif self.opts.encoder_type == 'PointNetEncoder':
-			encoder = psp_encoders.PointNetEncoder(50, 'ir_se', self.opts)
-		elif self.opts.encoder_type == 'PointNetEncoderV2':
-			encoder = psp_encoders.PointNetEncoderV2(50, 'ir_se', self.opts)
-		elif self.opts.encoder_type == 'TransformerEncoder':
-			encoder = psp_encoders.TransformerEncoder(50, 'ir_se', self.opts)
 		else:
 			raise Exception('{} is not a valid encoders'.format(self.opts.encoder_type))
 		return encoder
